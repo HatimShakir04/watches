@@ -1,0 +1,24 @@
+
+<h2>Add New Watch</h2>
+<form id="addProduct">
+    <input type="text" id="productName" placeholder="Watch Name" required>
+    <input type="number" id="price" placeholder="Price" required>
+    <select id="brand">
+        <option>Rolex</option>
+        <option>Omega</option>
+        <option>Casio</option>
+    </select>
+    <button type="submit">Add Product</button>
+</form>
+
+<script>
+document.getElementById("addProduct").addEventListener("submit", function(event) {
+    event.preventDefault();
+    let productName = document.getElementById("productName").value;
+    let price = document.getElementById("price").value;
+    let brand = document.getElementById("brand").value;
+
+    let product = { productName, price, brand };
+    console.log("Product Added:", product);
+});
+</script>

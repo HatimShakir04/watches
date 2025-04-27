@@ -1,0 +1,313 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap');
+
+:root {
+    --color-gold: #d4af37;
+    --color-dark-bg: #0a0a23;
+    --color-light-bg: #1a1a40;
+    --color-white: #f5f5f5;
+    --color-gray-light: #b0b0b0;
+    --color-shadow: rgba(0, 0, 0, 0.5);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-dark-bg);
+    color: var(--color-white);
+    line-height: 1.6;
+    font-size: 16px;
+    min-height: 100vh;
+}
+
+/* Links */
+a {
+    color: var(--color-gold);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    background-color: var(--color-light-bg);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px var(--color-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-gold);
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.3rem 0.5rem;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+.cart-icon {
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+#search-bar {
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    width: 180px;
+    transition: box-shadow 0.3s ease;
+}
+
+#search-bar:focus {
+    box-shadow: 0 0 8px var(--color-gold);
+}
+
+/* User Section */
+.user-section a {
+    font-weight: 600;
+    color: var(--color-gold);
+    border: 1.5px solid var(--color-gold);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.user-section a:hover {
+    background-color: var(--color-gold);
+    color: var(--color-dark-bg);
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.hero, .about-hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    font-family: 'Playfair Display', serif;
+    color: var(--color-gold);
+    background: linear-gradient(135deg, #1a1a40 0%, #0a0a23 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--color-shadow);
+    margin-bottom: 3rem;
+}
+
+.hero h1, .about-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+}
+
+.hero p, .about-hero p {
+    font-size: 1.3rem;
+    color: var(--color-gray-light);
+}
+
+/* Featured Watches Section */
+.featured-watches h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--color-gold);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.watch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.watch-card {
+    background-color: var(--color-light-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--color-shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.watch-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px var(--color-shadow);
+}
+
+.watch-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.watch-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--color-gold);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.watch-card p {
+    font-size: 1rem;
+    color: var(--color-gray-light);
+    text-align: center;
+}
+
+/* About Content Section */
+.about-content {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1 1 400px;
+    color: var(--color-white);
+}
+
+.about-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-gold);
+}
+
+.about-text p, .about-text ul {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--color-gray-light);
+    margin-bottom: 1rem;
+}
+
+.about-text ul {
+    list-style: inside disc;
+}
+
+.about-image {
+    flex: 1 1 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px var(--color-shadow);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-light-bg);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    color: var(--color-gray-light);
+    margin-top: 4rem;
+    box-shadow: 0 -2px 8px var(--color-shadow);
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+footer ul li a {
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    #search-bar {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 0.5rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .watch-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1, .about-hero h1 {
+        font-size: 2.5rem;
+    }
+}
